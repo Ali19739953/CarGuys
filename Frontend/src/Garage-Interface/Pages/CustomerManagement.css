@@ -1,0 +1,866 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: auto;   */
+  
+}
+.CustomerManagementDetailsSection_Item_Buttons_Message_Icon{
+  background: none;
+  all: unset;
+}
+
+.CustomerManagementContainer {
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  display: flex;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%; 
+  box-sizing: border-box;   
+  height: 100vh;
+  overflow: hidden;
+}
+
+.CustomerManagementMain {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+
+.CustomerManagementContent {
+  padding: 0px;
+}
+
+.CustomerManagementStatsSection_IconAndHeading {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.CustomerManagementStatsSection_IconAndHeading_Heading {
+  font-size: 16px;
+}
+
+.CustomerManagementStatSection_Content {
+  display: flex;
+  align-items: top;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: #2e2a25;
+  padding: 0px;
+  border-radius: 10px;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  flex-wrap: wrap; 
+  box-sizing: border-box;
+  max-width: 100%; 
+  overflow: auto; 
+  scrollbar-gutter: stable;
+}
+
+.CustomerManagementStatSection_Content_Number {
+  color: var(--Primary-Base-White, #FFF);
+  font-family: Urbanist;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 168%; /* 120px */
+}
+
+.CustomerManagementStatSection_Content_Calender {
+  display: flex;
+  align-items: top;
+  gap: 20px; 
+  flex-wrap: wrap; 
+  max-width: 100%;
+  flex-shrink: 1;
+}
+
+.CustomerManagementStatsSection_Content_Calender_Statement1 {
+  color: var(--Primary-Base-White, #FFF);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 160%; /* 25.6px */
+}
+
+.CustomerManagementDetailsSection_Header_Item{
+  font-size: 16px;
+}
+
+.CustomerManagementDetailsSection_Item {
+  background-color: #2e2a25;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.CustomerManagementDetailsSection_Item:hover {
+  transform: scale(1.02);
+  transition: transform 0.15s ease-in-out;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+}
+
+.CustomerManagementDetailsSection_Item_PictureAndDetails {
+  display: flex;
+  /* position: relative;
+  left: 60px; */
+  align-items: center;
+  gap: 10px;
+}
+
+.CustomerManagementDetailsSection_Item_Details {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; 
+  align-items: left;
+}
+
+.CustomerManagementDetailsSection_Item_Picture_Img {
+  width: 50px; 
+  height: 50px;
+  border-radius: 6%; 
+}
+
+.CustomerManagementDetailsSection_Item_Details_CustomerName {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.CustomerManagementDetailsSection_Item_Details_CustomerLocation {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #757575; 
+}
+
+.CustomerManagementDetailsSection_Item_Buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CustomerManagementDetailsSection_Item_Buttons_Flex {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.CustomerManagementDetailsSection_Item_Buttons_AccessContracts {
+  display: flex;
+  width: 145px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+ .Service-Details{
+  position: relative;
+  right: 80px;
+  top: 60px;
+ }
+.CustomerManagementDetailsSection_Item_Buttons_ClientReports {
+  display: flex;
+  width: 143px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.CustomerManagementDetailsSection_Item_Buttons_Delete {
+  display: flex;
+  width: 140px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.CustomerManagementDetailsSection_Item_Buttons_Message {
+  background: none;
+  all: unset;
+  cursor: pointer;
+  /* display: flex;
+  width: 140px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%); */
+}
+
+.CustomerManagementDetailsSection_Header_Item {
+  position: static;  
+}
+
+.CustomerManagementMain::-webkit-scrollbar {
+  width: 6px;
+    height: 1px;
+}
+
+.CustomerManagementMain::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.CustomerManagementMain::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.CustomerManagementMain::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}
+.tooltip {
+  position: absolute;
+  bottom: 60px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 1000;
+  border: none;
+  background: none;
+}
+
+.CustomerManagementDetailsSection_Item_Buttons_Message {
+  position: relative; /* This will make the tooltip position relative to the message button */
+}
+
+.CustomerManagementStatSection_Content::-webkit-scrollbar {
+  width: 3px; /* Adjust scrollbar width */
+  height: 3px;
+}
+
+.CustomerManagementStatSection_Content::-webkit-scrollbar-thumb {
+  background-color: #FFA500; /* Style scrollbar thumb */
+  border-radius: 10px;
+}
+
+.CustomerManagementStatSection_Content::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00; /* Style scrollbar thumb on hover */
+}
+
+.CustomerManagementStatSection_Content::-webkit-scrollbar-track {
+  background-color: #1D1B20; /* Style scrollbar track */
+}
+
+/* Make the layout responsive for smaller screens */
+@media (max-width: 830px) {
+  .CustomerManagementStatSection_Content {
+    flex-direction: column;
+    gap: 10px; /* Reduce gap on smaller screens */
+    padding: 10px; 
+  }
+
+  .CustomerManagementStatSection_Content_Calender {
+    display: flex;
+    flex-direction: column; /* Stack the calendar vertically */
+    gap: 10px; /* Adjust gap */
+  }
+
+  .CustomerManagementDetailsSection_Item_Buttons_Flex {
+    flex-direction: column;
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .CustomerManagementStatSection_Content_Number {
+    font-size: 96px; /* Adjust font size for smaller screens */
+  }
+  
+  .CustomerManagementDetailsSection_Item_Buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.CustomerVehicles {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.VehicleCard {
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0.05) 100%);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  display: flex;
+  gap: 15px;
+}
+
+.VehicleCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 165, 0, 0.2);
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.25) 0%, rgba(255, 165, 0, 0.1) 100%);
+}
+
+.VehicleCard--selected {
+  border: 2px solid #ffa500;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.3) 0%, rgba(255, 165, 0, 0.15) 100%);
+}
+
+.VehicleCard_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.NumberPlate {
+  font-weight: 600;
+  color: #ffa500;
+  font-size: 16px;
+}
+
+.VehicleCard_Details {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.VehicleServiceHistory {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.15) 0%, rgba(255, 165, 0, 0.05) 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.VehicleServiceHistory h5 {
+  color: #FFA500;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.ServiceRecord {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(39, 36, 29, 0.95) 0%, rgba(39, 36, 29, 0.85) 100%);
+  transition: transform 0.2s ease;
+}
+
+.ServiceRecord:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ServiceRecord_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.ServiceDate {
+  font-weight: 600;
+  color: #FFA500;
+  font-size: 14px;
+}
+
+.ServiceTime {
+  color: #ccc;
+  font-size: 14px;
+  background: rgba(255, 165, 0, 0.1);
+  padding: 5px 8px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 4px;
+}
+
+.ServiceStatus {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ServiceStatus--pending {
+  background: linear-gradient(180deg, #ffd700 0%, #b47500 100%);
+  color: #000;
+}
+
+.ServiceStatus--completed {
+  background: linear-gradient(180deg, #28a745 0%, #1e7e34 100%);
+  color: #fff;
+}
+
+.ServiceStatus--ongoing {
+  background: linear-gradient(180deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+}
+
+.ServiceRecord_Details {
+  padding: 10px;
+  background: rgba(255, 165, 0, 0.05);
+  border-radius: 6px;
+}
+
+.ServicesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  
+}
+
+.ServiceTag {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 0%, rgba(255, 165, 0, 0.05) 100%);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: white;
+  font-size: medium;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600; 
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ServiceTag::before {
+  content: '•';
+  color: #FFA500;
+  font-size: 14px;
+}
+
+.PaymentMethod {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 165, 0, 0.1);
+  font-size: 13px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.PaymentMethod_Icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Remove the previous ::before pseudo-element since we're using actual images now */
+.PaymentMethod::before {
+  content: none;
+}
+
+/* Empty state styling */
+.NoServices {
+  text-align: center;
+  padding: 30px;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Scrollable container for multiple services */
+.ServiceRecordsList {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar styling */
+.ServiceRecordsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ServiceRecordsList::-webkit-scrollbar-track {
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 3px;
+}
+
+.ServiceRecordsList::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFA500 0%, #B47500 100%);
+  border-radius: 3px;
+}
+
+.ServiceRecordsList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFB533 0%, #CC8600 100%);
+}
+.VehicleServiceHistory {
+  margin-top: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.VehicleServiceHistory_Header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.VehicleServiceHistory_Header_Left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.VehicleServiceHistory_Image {
+  width: 120px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.VehicleServiceHistory_Info h5 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.VehicleServiceHistory_Info p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.VehicleSpecs {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.VehicleServiceHistory_Stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.StatBox {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+.StatNumber {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.StatLabel {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.ServiceRecordsList {
+  margin-top: 1rem;
+}
+
+.ServiceRecordsList_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.StatusFilter {
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: bolder;
+  border: transparent;
+  border: none;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0.05) 100%);
+}
+
+.ServiceRecord {
+ 
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ServiceRecord--completed {
+  border-left: 4px solid #28a745;
+}
+
+.ServiceRecord--pending {
+  border-left: 4px solid #ffc107;
+}
+
+.ServiceRecord--cancelled {
+  border-left: 4px solid #dc3545;
+}
+
+.ServiceRecord_Header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.StatusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.StatusBadge--completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.StatusBadge--pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.StatusBadge--cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.ServicesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.ServiceTag {
+ 
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ServiceRecord_Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.PaymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.PaymentMethod_Icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.ServiceID {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Vehicle Card Styling */
+.VehicleCard {
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0.05) 100%);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  display: flex;
+  gap: 15px;
+}
+
+.VehicleCard_Image {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.VehicleCard_Image_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.VehicleCard_Content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.VehicleServiceHistory {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.15) 0%, rgba(255, 165, 0, 0.05) 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.VehicleServiceHistory_Header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.VehicleServiceHistory_Header_Left {
+  display: flex;
+  gap: 2rem;
+}
+
+.VehicleServiceHistory_Image {
+  width: 200px; 
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.VehicleServiceHistory_Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.VehicleServiceHistory_Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.VehicleServiceHistory_Info h5 {
+  color: #FFA500;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.VehicleServiceHistory_Info p {
+  margin: 0.25rem 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.VehicleSpecs {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.VehicleSpecs span {
+  background: rgba(255, 165, 0, 0.1);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #FFA500;
+}
+
+
+.VehicleServiceHistory_Stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.StatBox {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 10px;
+  min-width: 120px;
+  border: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.StatNumber {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFA500;
+  margin-bottom: 0.3rem;
+}
+
+.StatLabel {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .VehicleCard {
+    width: 100%;
+  }
+
+  .VehicleServiceHistory_Header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .VehicleServiceHistory_Header_Left {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .VehicleServiceHistory_Image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .VehicleServiceHistory_Stats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .StatBox {
+    min-width: calc(50% - 1rem);
+  }
+}

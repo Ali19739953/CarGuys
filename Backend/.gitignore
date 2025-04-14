@@ -1,0 +1,60 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment directories
+myenv/
+venv/
+
+# Ignore Django database
+db.sqlite3
+
+# Ignore Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Ignore secrets and configuration files
+*.env
+firebase_config.py
+webBackend/key.json
+
+# Ignore all log files and debug output
+*.log
+*.pot
+*.log.*
+*.swp
+
+# Ignore staticfiles (if using Django's collectstatic command)
+staticfiles/
+static/
+
+# Ignore media files (user-uploaded content)
+media/
+
+# Ignore IDE specific files (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Node.js dependencies (if present in the frontend)
+node_modules/
+
+# Ignore cache and backup files
+*.bak
+*.tmp
+*.orig
+
+# Ignore coverage reports (if using coverage.py for testing)
+htmlcov/
+.coverage
+.coverage.*
+
+# Ignore build artifacts
+build/
+dist/
+
+#Node specific files
+NodeServer/.env
+NodeServer/firebase-service-account.json

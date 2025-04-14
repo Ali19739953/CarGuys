@@ -1,0 +1,111 @@
+.operatingHoursContainer {
+  background: transparent;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  transition: transform 0.15s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+}
+
+.operatingHoursHeader {
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.operatingHoursTable {
+  display: grid;
+  gap: 15px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.operatingHoursRow {
+  display: grid;
+  grid-template-columns: 120px 80px 200px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.dayColumn {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.statusColumn {
+  color: #00ff00;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.statusColumn.closed {
+  color: #ff0000;
+}
+
+.timeColumn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255, 165, 0, 0.2);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  justify-content: center;
+}
+
+.timeColumn span {
+  color: #fff;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 30px;
+  color: #ccc;
+  font-style: italic;
+  background: rgba(255, 165, 0, 0.05);
+  border-radius: 6px;
+}
+
+.error {
+  color: #FF4444;
+}
+
+@media (max-width: 768px) {
+  .operatingHoursContainer {
+    margin-right: 10px;
+    padding: 20px;
+    min-width: auto;
+  }
+  
+  .operatingHoursTable {
+    width: 95%;
+    padding: 10px;
+  }
+  
+  .operatingHoursRow {
+    padding: 5px 0;
+  }
+  
+  .dayColumn {
+    width: 90px;
+    padding-left: 10px;
+  }
+  
+  .timeColumn {
+    min-width: 150px;
+  }
+}

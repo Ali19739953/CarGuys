@@ -1,0 +1,221 @@
+.paymentMethods {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .paymentMethods h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .noMethods {
+    text-align: center;
+    color: #999;
+    margin: 20px 0;
+  }
+  
+  .methodList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .methodItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #4A4A4A;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .methodItem:hover {
+    background-color: #555555;
+  }
+  
+  .radioInput {
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .methodDetails {
+    flex: 1;
+  }
+  
+  .methodDetails p {
+    margin: 5px 0;
+    color: #DDD;
+  }
+  
+  .methodDetails strong {
+    color: white;
+    margin-right: 8px;
+  }
+  
+  .methodActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .actionButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    color: white;
+  }
+  
+  .actionButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .removeButton {
+    background-color: #dc3545;
+  }
+  
+  .editButton {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .addButton {
+    background-color: #FFA500;
+    
+  }
+  
+  .actionButton:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: linear-gradient(90deg, rgba(255, 165, 0, 5) 0%, rgba(255, 165, 0, 0) 100%);
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    border: 2px solid #404040;
+}
+  
+  .modalContent h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .formRow .formGroup {
+    flex: 1;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: #DDD;
+  }
+  
+  .formGroup input {
+    width: 95%;
+    padding: 8px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #27241d 0%, rgba(39, 36, 29, 0.1) 100%);
+    color: white;
+    font-size: 16px;
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #FFA500;
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+  }
+  
+  .error {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .saveButton {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .formRow {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .modalContent {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .methodActions {
+      flex-direction: column;
+    }
+  
+    .actionButton {
+      width: 100%;
+    }
+  
+    .modalActions {
+      flex-direction: column;
+    }
+  
+    .modalActions button {
+      width: 100%;
+    }
+  }

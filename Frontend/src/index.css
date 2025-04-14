@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif; /* Use only Ubuntu */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; /* Keep this unchanged if you want to keep a monospace font for code */
+}
+
+#root {
+  display: flex;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+}
+
+

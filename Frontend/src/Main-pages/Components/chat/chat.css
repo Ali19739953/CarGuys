@@ -1,0 +1,719 @@
+.Chat_chat {
+  flex: 2;
+  /* border-left: 1px solid #dddddd35;
+  border-right: 1px solid #dddddd35; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 80px;
+  /* min-height: 100%;  */
+  /* max-height: 100vh;  */
+  /* background-color: rgb(19, 19, 19); */
+  max-height: 100vh;
+  animation: fadeIn 1.3s ease;
+}
+
+.Chat_top {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(19, 19, 19);
+  /* border-bottom: 1px solid #dddddd35; */
+  border-radius: 20px;
+}
+
+.Chat_top_texts_NameandLocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.Chat_user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Chat_user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Chat_Texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.Chat_texts_text {
+  min-width: 200px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 10px;
+  background: linear-gradient(177deg, rgba(255, 165, 0, 0.20) 4.74%, rgba(255, 165, 0, 0.03) 90.11%);
+}
+
+
+.Chat_texts_Timestamp {
+  font-size: 13px;
+  font-weight: lighter;
+  color: #ffffff;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.Chat_texts_text p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.Chat_icons {
+  display: flex;
+  
+}
+
+.Chat_icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 5px;
+}
+
+.Chat_icons img:hover{
+  transform: scale(1.50);
+}
+
+.Chat_center {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(19, 19, 19);
+}
+
+.Chat_center::-webkit-scrollbar {
+  width: 6px;
+}
+
+.Chat_center::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.Chat_center::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.Chat_center::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}
+
+.message {
+  max-width: 70%;
+  display: flex;
+  gap: 20px;
+}
+
+.message.own {
+  align-self: flex-end;
+}
+
+.message.own .texts p {
+  background-color: #5183fe;
+}
+
+.message img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Chat_texts img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.Chat_texts p {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+.Chat_bottom {
+  padding: 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgb(19, 19, 19);
+  border-radius: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.Chat_bottom img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.Chat_bottom input {
+  flex: 1;
+  background: none; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid white;
+}
+
+.Chat_bottom input:disabled {
+  cursor: not-allowed;
+}
+
+.Chat_emoji {
+  position: relative;
+}
+
+.picker {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+
+.Chat_sendButton {
+  background-color: #5183fe;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Chat_sendButton:disabled {
+  background-color: #5182feb4;
+  cursor: not-allowed;
+}
+
+.ChatImgModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(5px); 
+  animation: fadeIn 0.3s ease;
+}
+
+.ChatImgModalOverlay {
+  background: #1D1B20;
+  padding: 25px;
+  border-radius: 12px;
+  width: 70%;
+  max-width: 500px; 
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.3s ease;
+  text-align: center;
+}
+
+.ChatImgModalOverlay img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.ChatImgModalButtons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.ChatImgModalButtonsSend {
+  display: flex;
+  width: 147px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #58FF68 0%, #35993F 100%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ChatImgModalButtonsSend:hover {
+  transform: scale(1.05);
+}
+
+.ChatImgModalButtonsReject {
+  display: flex;
+  width: 147px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FF5151 0%, #993131 100%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ChatImgModalButtonsReject:hover{
+  transform: scale(1.05);
+}
+
+.ChatBottonButtonsSend {
+  display: flex;
+  width: 100px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ChatBottonButtonsSend:hover {
+  transform: scale(1.05);
+}
+
+
+.ChatUserModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1000; 
+  backdrop-filter: blur(5px); 
+  animation: fadeIn 0.3s ease; 
+}
+
+.ChatUserModalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ChatUserModalContent {
+  background: #1D1B20;
+  padding: 25px;
+  border-radius: 12px;
+  width: 70%;
+  max-width: 500px; 
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.3s ease; 
+  text-align: center;
+}
+
+.ChatUserModalContentHeading {
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChatUserModalContentHeading h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFA500;
+  text-align: center;
+  width: 100%; 
+}
+
+
+
+.ChatUserModalContent p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.ChatUserModalContent strong {
+  color: #FFA500;
+}
+
+.ChatUserModalContent button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #FFA500;
+  color: #1D1B20;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ChatUserModalContent button:hover {
+  background-color: #e69500;
+}
+
+.message.own .delete-button-chat {
+  display: none;
+  color: red;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.message.own:hover .delete-button-chat {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.SharedMediaModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  backdrop-filter: blur(5px); 
+}
+
+.ShowRecordingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  backdrop-filter: blur(5px); 
+  animation: fadeIn 0.3s ease;
+}
+
+
+.SharedMediaModalContent {
+  background: #1D1B20;
+  padding: 25px;
+  border-radius: 12px;
+  width: 70%;
+  height: 70%;
+  max-height: 80%;
+  overflow: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.3s ease; 
+  text-align: center;
+}
+
+.ShowRecordingModalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1D1B20;
+  padding: 25px;
+  border-radius: 12px;
+  width: 20%;
+  height: 50%;
+  max-height: 80%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  opacity: 1;
+
+  animation: fadeIn 0.3s ease; 
+  text-align: center;
+  
+}
+
+
+.SharedMediaGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+  gap: 12px;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+
+.SharedMediaImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease; 
+}
+
+.SharedMediaImage:hover {
+  transform: scale(1.05);
+}
+
+.ImageDownloadButton {
+  display: none; 
+  color: #ffa500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
+.message:hover .ImageDownloadButton {
+  display: inline-block;
+  
+  font-weight: bold;
+  color: #5183fe; 
+}
+
+
+.message:hover .ImageDownloadButton:hover {
+  color: #ff8c00;  
+}
+
+.download-icon-img {
+  margin-top: 5px;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.ShowRecordingModalStopPlay {
+min-width: 132px;
+min-height: 132px;
+}
+
+.ShowRecordingModalStartPlay{
+  min-width: 132px;
+  min-height: 132px;
+  
+}
+
+.ShowRecordingModalContent_RecordButton {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ShowRecordingModalContent_AudioandButtons {
+  padding: 10px;
+  
+  }
+
+  .ShowRecordingModalContent_AudioandButtons.recordedAudioBackground {
+    background:#7f7f7f;
+    border-radius: 20px;
+    animation: fadeIn 0.3s ease;
+  }
+
+.ShowRecordingModalContent_AudioandButtons_Buttons {
+display: flex;
+flex-direction: row;
+margin-top: 10px;
+gap: 10px;
+}
+
+.ShowRecordingModalContent_AudioandButtons_Reject {
+  display: flex;
+  width: 147px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FF5151 0%, #993131 100%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ShowRecordingModalContent_AudioandButtons_Reject:hover {
+  transform: scale(1.05);
+}
+
+.ShowRecordingModalContent_AudioandButtons_Send {
+  display: flex;
+  width: 147px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #58FF68 0%, #35993F 100%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ShowRecordingModalContent_AudioandButtons_Send:hover {
+  transform: scale(1.05);
+}
+
+.ShowRecordingModalContent_Close {
+  display: flex;
+  width: 90px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #4A4A4A 0%, rgba(64, 64, 64, 0.8) 100%);
+font-weight: bold;
+transition: transform 0.2s ease;
+cursor: pointer;
+color: rgb(255, 255, 255);
+border: 1px solid black;
+margin-top: 40px;
+}
+
+.ShowRecordingModalContent_Close:hover {
+  transform: scale(1.05);
+}
+
+.pdf-container {
+  margin-top: 10px;
+}
+
+.DownloadPdfButton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: linear-gradient(180deg, #4A4A4A 0%, rgba(64, 64, 64, 0.8) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.DownloadPdfButton:hover {
+  background-color: #45a049;
+}
+
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pdf-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1D1B20;
+  padding: 25px;
+  border-radius: 12px;
+  width: 20%;
+  height: 50%;
+  max-height: 80%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  opacity: 1;
+
+  animation: fadeIn 0.3s ease;
+  text-align: center;
+}
+
+
+
+/* for fade in animation for the modals */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

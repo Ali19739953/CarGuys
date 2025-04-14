@@ -1,0 +1,126 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Keeps the height 100% but allows scroll */
+  /* Remove overflow: hidden */
+   overflow: auto;  
+   /* background: #fff; */
+
+}
+  
+.PendingServicesContainer {
+  display: flex;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%; 
+  box-sizing: border-box;   
+  height: 100vh;
+  overflow: hidden;
+}
+
+.PendingServicesMain {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.PendingServicesContent {
+  padding: 0px;
+}
+
+.PendingServicesSearchbar{
+  margin-bottom: 20px;
+}
+
+.PendingServicesItem_Box {
+  background-color: #2e2a25;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.PendingServicesItem_Box:hover {
+  transform: scale(1.02);
+  transition: transform 0.15s ease-in-out;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+}
+
+.PendingServicesItem_Box_ImageAndName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.PendingServicesItem_Box_Fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.PendingServicesItem_Box_Button {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 10px; 
+}
+
+.PendingServicesItem_Box_Button_AccessPreServiceContract {
+  display: flex;
+  width: 225px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  transition: transform 0.2s ease; 
+  font-weight: bold;
+}
+
+.PendingServicesItem_Box_Button_AccessPreServiceContract:hover{
+  transform: scale(1.05);
+}
+
+.PendingServicesItem_Box_Button_MarkAsOngoing {
+  display: flex;
+  width: 150px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  transition: transform 0.2s ease; 
+  font-weight: bold;
+}
+
+.PendingServicesItem_Box_Button_MarkAsOngoing:hover {
+  transform: scale(1.05);
+}
+
+.PendingServicesMain::-webkit-scrollbar {
+  width: 6px;
+    height: 1px;
+}
+
+.PendingServicesMain::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.PendingServicesMain::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.PendingServicesMain::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}

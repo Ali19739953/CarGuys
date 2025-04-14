@@ -1,0 +1,154 @@
+.preservice-container {
+    padding: 20px 40px;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+    background-color: #111;
+    width: 100%;
+  }
+  
+  .preservice-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #FFA500;
+    text-align: center;
+  }
+  
+  .preservice-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .preservice-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .preservice-right-column {
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+    border-radius: 15px;
+    padding: 25px;
+    height: fit-content;
+    margin-top: 100px;
+  }
+  
+  .preservice-section {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .preservice-section--card {
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  .preservice-section--card:hover {
+    transform: scale(1.02);
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+  }
+  
+  .preservice-section__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFA500;
+    text-align: center;
+  }
+  
+  .preservice-section__vehicle-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 165, 0, 0.3);
+  }
+  
+  .preservice-section__info {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 165, 0, 0.1);
+  }
+  
+  .preservice-section__info-label {
+    font-weight: bold;
+    color: #FFA500;
+  }
+  
+  .preservice-form__group {
+    margin-bottom: 25px;
+  }
+  
+  .preservice-form__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FFA500;
+    font-size: 16px;
+  }
+  
+  .preservice-form__input {
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+  }
+  
+  .preservice-form__input:focus {
+    outline: none;
+    border-color: #FFA500;
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.1);
+  }
+  
+  .preservice-form__button {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+  }
+  
+  .preservice-form__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.2);
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .preservice-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .preservice-container {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .preservice-section__info {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }

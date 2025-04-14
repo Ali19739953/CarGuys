@@ -1,0 +1,69 @@
+.calendarContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  .compactCalendarWrapper {
+    width: 229px;
+    height: 178px;
+    border-radius: 16px;
+    overflow: hidden;
+  }                                  
+  
+  .compactCalendar {
+    width: 100%;
+    height: 100%;
+    border: none;
+    line-height: 1.125em;
+    background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .compactCalendar :global(.react-calendar__navigation) {
+    height: 24px;
+    margin-bottom: 0.25em;
+    
+  }
+  
+  .compactCalendar :global(.react-calendar__navigation button) {
+    min-width: 24px;
+    background: none;
+    background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
+  
+  }
+  
+  .compactCalendar :global(.react-calendar__month-view__weekdays) {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    
+  }
+  
+  .compactCalendar :global(.react-calendar__month-view__days__day) {
+    font-size: 0.7em;
+    padding: 1px 0;
+ 
+  }
+  
+  .compactCalendar :global(.react-calendar__tile) {
+    padding: 1px;
+    background: none;
+  }
+  
+  .compactCalendar :global(.react-calendar__tile--now) {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .compactCalendar :global(.react-calendar__tile--active) {
+    background: rgba(0, 0, 0, 0.3);
+
+  }
+  
+  .compactCalendar :global(.react-calendar__tile:enabled:hover),
+  .compactCalendar :global(.react-calendar__tile:enabled:focus) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }

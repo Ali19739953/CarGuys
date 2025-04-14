@@ -1,0 +1,19 @@
+.tabNavigation {
+    display: flex;
+    background-color: #3A3A3A;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .tab.active {
+    background-color: #FFA500;
+  }

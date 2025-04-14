@@ -1,0 +1,44 @@
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    /* Remove overflow: hidden */
+     overflow: auto;  
+     /* background: #fff; */
+
+}
+
+.clientMessengerContainer {
+    display: flex;
+    /* background-color: #111;  */
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+    background-color: #111;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100%;
+    /* overflow: auto; */
+    
+   
+}
+
+.clientMessengerMain {
+    padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; 
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.clientMessengerContent {
+    display: flex;
+    height: 100vh;
+    /* flex-direction: row; */
+    /* max-height: 100%; */
+    /* background: linear-gradient(177deg, rgba(255, 165, 0, 0.20) 4.74%, rgba(255, 165, 0, 0.03) 90.11%); */
+    
+    box-sizing: border-box;
+}

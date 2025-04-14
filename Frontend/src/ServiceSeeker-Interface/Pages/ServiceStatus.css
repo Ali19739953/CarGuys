@@ -1,0 +1,98 @@
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: auto;   */
+  }
+
+  .ServiceStatusContainer {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+    display: flex;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ServiceStatusMain {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-x: auto;
+  }
+
+
+  .ServiceStatusSelectCar  {
+    display: flex;
+width: 300px;
+height: 30px;
+justify-content: flex-start;
+align-items: center;
+flex-shrink: 0;
+margin-bottom: 20px;
+  }
+  
+  .ServiceStatusSelectCar_Selector {
+    /* display: flex;
+    align-items: center; */
+    width: 100%;
+    padding: 5px 10px; 
+    border: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    border-radius: 60px;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);
+
+
+  }
+  
+
+  .ServiceStatusSelectCar_Selector::placeholder {
+    color: #999999;
+  }
+
+  .ServiceStatusSortBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ServiceStatusSortBar_SortButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+   /* background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0.03) 100%); */
+  background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+  .ServiceStatusSortBar_SortBy {
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: small;
+  }
+
+  .ServiceStatusSortBar_SortButton.active {
+    border-radius: 60px;
+background: linear-gradient(90deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+color: black;
+transition: transform 0.2s ease;
+  }
+
+.ServiceStatusSortBar_SortButton.active:hover{
+  transform: scale(1.05);
+}

@@ -1,0 +1,52 @@
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Set max width for the search bar */
+}
+
+.searchBar {
+  width: 100%;
+  padding: 10px 20px; /* Adjusted padding */
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(181deg, rgba(255, 165, 0, 0.20) 5.29%, rgba(255, 165, 0, 0.03) 86.3%);
+  background-color: #2e2a25;
+  font-size: 16px;
+  color: white;
+  height: 10px;
+}
+
+.searchBar::placeholder {
+  color: #999999;
+}
+
+/* Focus styles */
+.searchBar:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffa500;
+}
+
+/* Hover styles */
+.searchContainer:hover .searchBar {
+  background-color: #5d5d5d;
+}
+
+@media (max-width: 470px) {
+
+  .searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 200px; /* Set max width for the search bar */
+  }
+
+}
+
+@media (max-width: 370px) {
+
+  .searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 100px; /* Set max width for the search bar */
+  }
+
+}

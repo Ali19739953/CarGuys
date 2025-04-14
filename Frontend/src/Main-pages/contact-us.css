@@ -1,0 +1,175 @@
+.contact-us-content {
+  background-color: #1A1A1A;
+  padding: 40px 20px;
+  min-height: calc(100vh - 50px);
+}
+
+.contact-us-content h1 {
+  color: #FFA500;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  background: linear-gradient(90deg, rgba(26, 26, 26, 0.95) 0%, rgba(68, 68, 68, 0.95) 100%);
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(255, 165, 0, 0.1);
+  transition: transform 0.3s ease;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: visible;
+  max-width: 100%;
+}
+
+.contact-info:hover, .contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info h2, .contact-form h2 {
+  color: #FFA500;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  color: #FFA500;
+  font-family: 'Urbanist', sans-serif;
+  margin-top: 20px;
+}
+
+.contact-info p, .contact-info li {
+  color: #f5f5f5;
+  line-height: 1.6;
+  font-family: 'Urbanist', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #f5f5f5;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 2px;
+  border: 2px solid rgba(255, 165, 0, 0.3);
+  border-radius: 8px;
+  background-color: rgba(26, 26, 26, 0.95);
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFA500;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  color: #1A1A1A;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Urbanist', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #4CAF50;
+  margin-top: 10px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 10px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.hours-title {
+  color: #FFA500;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 35px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.contact-info p {
+  margin-left: 15px;
+  color: #f5f5f5;
+  line-height: 1.6;
+  font-family: 'Urbanist', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: calc(100% - 30px);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  
+  .contact-info, .contact-form {
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .hours-title {
+    font-size: 18px;
+  }
+}

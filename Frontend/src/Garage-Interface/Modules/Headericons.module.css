@@ -1,0 +1,85 @@
+.WelcomeText {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.HeaderIconsHeader {
+    display: flex;
+    justify-content: space-between; /* Space between message and icons */
+    align-items: center; /* Vertically center the content */
+    background-color: transparent;
+    padding: 0px; /* Add padding to prevent content from touching edges */
+    /* width: 100%;  */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    
+}
+
+.messageSection {
+    flex: 1; /* Takes up available space for the message */
+    min-width: 0; 
+    overflow: hidden; /* Hides overflowing text */
+}
+
+.iconsSection {
+    display: flex; /* Flexbox to align icons side by side */
+    flex-direction: row; /* Ensures icons are arranged horizontally */
+    align-items: center; /* Vertically aligns icons */
+    justify-content: flex-end; /* Pushes the icons to the right side */
+    gap: 10px; /* Adds space between the icons */
+    overflow: hidden; /* Prevents icons from overflowing */
+    /* margin-right: 10px; */
+    padding: 10px;
+}
+
+.icon {
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.12); /* Icons grow by 20% when hovered */
+}
+
+.SettImg,
+.bellImg,
+.notiImg,
+.powerImg {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 450px) {
+    .WelcomeText {
+        font-size: 20px; /* Adjust text size for smaller screens */
+    }
+
+    .iconsSection {
+        gap: 5px; /* Reduce space between icons on small screens */
+    }
+    
+    .SettImg,
+    .bellImg,
+    .notiImg,
+    .powerImg {
+        width: 28px; /* Reduce icon size for small screens */
+        height: 28px;
+    }
+}
+.notificationBadge {
+    background-color: red;
+    color: white;
+    border-radius:100%;
+    padding: 0em 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    position: absolute; 
+    right:0px; 
+    font-weight: bold;  
+  }
+

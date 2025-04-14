@@ -1,0 +1,32 @@
+/*
+Original Name: GaragrBrowser.css
+Renamed to => ViewGarageDetails.css
+*/
+
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Keeps the height 100% but allows scroll */
+    /* Remove overflow: hidden */
+     overflow: auto;  
+     /* background: #fff; */
+}
+
+.ViewGarageDetailsContainer {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+    display: flex;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ViewGarageDetailsMain {
+  padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+

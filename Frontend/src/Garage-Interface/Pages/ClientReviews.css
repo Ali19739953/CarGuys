@@ -1,0 +1,223 @@
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    /* Remove overflow: hidden */
+     overflow: auto;  
+
+
+}
+
+.ClientReviewsContainer {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+    display: flex;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ClientReviewsMain {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.ClientReviewsContent {
+    padding: 0px;
+    flex: 1;
+}
+
+.ClientReviewsSearchbar{
+    margin-bottom: 20px;
+}
+.StarRating {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.star-filled {
+  color: #ffd700;
+}
+
+.star-empty {
+  color: #808080;
+}
+.ClientReviewsItem {
+    background: rgba(255, 165, 0, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid rgba(255, 165, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+}
+
+.ClientReviewsItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.25) 0%, rgba(255, 165, 0, 0.05) 100%);
+}
+
+.ReviewHeader {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.ReviewInfo {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.VehicleImage {
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 165, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.ReviewDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.UserName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+.VehicleDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.VehicleDetails div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #999;
+}
+
+.ReviewContent {
+    margin-top: 16px;
+}
+
+.ReviewContent p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.StarRating {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.star-filled {
+    color: #FFA500;
+}
+
+.star-empty {
+    color: rgba(255, 165, 0, 0.2);
+}
+
+.Timestamp {
+    color: #999;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .ReviewInfo {
+        flex-direction: column;
+    }
+
+    .VehicleImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    .VehicleDetails {
+        grid-template-columns: 1fr;
+    }
+}
+
+  .ClientReviewsMain::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+  }
+  
+  .ClientReviewsMain::-webkit-scrollbar-track {
+    background-color: #1D1B20;
+  }
+  
+  .ClientReviewsMain::-webkit-scrollbar-thumb {
+    background-color: #FFA500;
+    border-radius: 10px;
+  }
+  
+  .ClientReviewsMain::-webkit-scrollbar-thumb:hover {
+    background-color: #FF8C00;
+  }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px 0;
+    font-weight: bolder;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    background-color: #FFA500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.pagination-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+.pagination-button.active {
+    background: linear-gradient(90deg, #000 25.1%, #B47500 100%);
+    color: black;
+    border-color: #007bff;
+}
+
+.pagination-button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}

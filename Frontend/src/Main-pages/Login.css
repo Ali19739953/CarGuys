@@ -1,0 +1,438 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #1a1a1a;
+}
+
+.loginContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background glow effect */
+.loginContainer::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -20%;
+  left: -10%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 165, 0, 0.15) 0%,
+    rgba(255, 165, 0, 0.05) 45%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.loginWindow {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left side with welcome message */
+.welcome-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.welcome-text {
+  max-width: 800px;
+}
+
+.welcome-text h1 {
+  color: white;
+  font-size: 64px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.welcome-text h1 span {
+  color: #ffa500;
+  display: inline;
+}
+
+/* Right side with login form */
+.loginSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.loginBox {
+  width: 400px;
+  background: linear-gradient(to bottom, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.03));
+  padding: 32px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.LoginTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.LoginTitle span {
+  color: #ffa500;
+}
+
+.loginEmail p,
+.loginPassword p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Form inputs */
+.loginEmailInput,
+.loginPasswordInput {
+  width: 100%;
+  height: 44px;
+  background: rgba(40, 40, 40, 0.95);
+  border: 1px solid rgba(156, 163, 175, 0.2);
+  border-radius: 8px;
+  padding: 0 16px;
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.loginPasswordInput {
+  padding-right: 40px;
+}
+
+.loginEmailInput:focus,
+.loginPasswordInput:focus {
+  border-color: #ffa500;
+}
+
+.loginPassword {
+  position: relative;
+}
+
+.loginPassword button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.forgot-password {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  margin: 16px 0;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #ffa500;
+}
+
+.sign-in-button {
+  width: 100%;
+  height: 44px;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 24px 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sign-in-button:hover {
+  transform: translateY(-2px);
+  background-color: #ffb52e;
+}
+
+.sign-in-button:active {
+  transform: translateY(0);
+}
+
+.or-divider {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 24px 0;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: rgba(156, 163, 175, 0.2);
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+.social-login {
+  display: flex;
+  gap: 12px;
+}
+
+.google-button,
+.apple-button {
+  flex: 1;
+  height: 44px;
+  background: rgba(40, 40, 40, 0.95);
+  border: 1px solid rgba(156, 163, 175, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.google-button:hover,
+.apple-button:hover {
+  background: rgba(255, 165, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.google-button:active,
+.apple-button:active {
+  transform: translateY(0);
+}
+
+.google-button img,
+.apple-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Large screens (above 1200px) */
+@media screen and (min-width: 1201px) {
+  .loginWindow {
+    padding: 0 80px;
+  }
+
+  .welcome-text h1 {
+    font-size: 64px;
+  }
+}
+
+/* Medium-large screens (992px - 1200px) */
+@media screen and (max-width: 1200px) {
+  .loginWindow {
+    padding: 0 40px;
+  }
+
+  .welcome-section {
+    padding-left: 40px;
+  }
+
+  .loginSection {
+    padding-right: 40px;
+  }
+
+  .welcome-text h1 {
+    font-size: 48px;
+  }
+}
+
+/* Medium screens (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .loginWindow {
+    padding: 0 20px;
+  }
+
+  .welcome-section {
+    padding-left: 20px;
+  }
+
+  .loginSection {
+    padding-right: 20px;
+  }
+
+  .welcome-text h1 {
+    font-size: 40px;
+  }
+
+  .loginBox {
+    width: 360px;
+    padding: 24px;
+  }
+}
+
+/* Small screens (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .loginContainer::before {
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    left: -20%;
+  }
+
+  .loginWindow {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .welcome-section,
+  .loginSection {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .welcome-section {
+    margin-top: 40px;
+  }
+
+  .welcome-text {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 36px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .loginBox {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .social-login {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .google-button,
+  .apple-button {
+    width: 100%;
+  }
+}
+
+/* Extra small screens (below 576px) */
+@media screen and (max-width: 575px) {
+  .loginContainer {
+    padding: 16px;
+  }
+
+  .loginWindow {
+    padding: 10px;
+  }
+
+  .welcome-text h1 {
+    font-size: 32px;
+  }
+
+  .loginBox {
+    padding: 20px;
+  }
+
+  .LoginTitle {
+    font-size: 20px;
+  }
+
+  .loginEmail p,
+  .loginPassword p {
+    font-size: 13px;
+  }
+
+  .loginEmailInput,
+  .loginPasswordInput,
+  .sign-in-button {
+    height: 40px;
+  }
+
+  .forgot-password {
+    font-size: 13px;
+  }
+}
+
+/* Height-based media queries for shorter screens */
+@media screen and (max-height: 700px) {
+  .loginWindow {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .welcome-section {
+    margin-top: 20px;
+  }
+
+  .loginBox {
+    margin: 20px auto;
+  }
+}
+
+/* Handle very tall mobile screens */
+@media screen and (max-width: 767px) and (min-height: 800px) {
+  .loginWindow {
+    justify-content: center;
+  }
+}
+
+/* Prevent layout issues on landscape mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .loginWindow {
+    height: auto;
+  }
+  
+  .welcome-text h1 {
+    font-size: 28px;
+  }
+  
+  .loginBox {
+    margin: 10px auto;
+  }
+}

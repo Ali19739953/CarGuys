@@ -1,0 +1,1804 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vh;
+  overflow: auto;  
+}
+
+::-webkit-scrollbar {
+  width: 2px; /* Width of the vertical scrollbar */
+  height: 2px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffa500; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8800; /* Thumb color on hover */
+}
+
+.HomepageContainer {
+  position: relative;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A !important;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%; 
+  box-sizing: border-box;   
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+
+.HomepageMain {
+  padding: 0px;
+  flex-grow: 1;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+.HomepageHeaderNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  /* padding: 0 20px; */
+  background:#ffa500;
+  /* background:linear-gradient(90deg, #FFA500 0%, #1A1A1A 80.1%); */
+  box-sizing: border-box;
+}
+
+.HomepageHeaderNavLogo  {
+  /* background:linear-gradient(90deg, #FFA500 20%, #1A1A1A 90%); */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.HomepageHeaderNavLogo img {
+  height: 35px;
+  width: 200px;
+  
+}
+.HomepageNavbarDivider {
+  color: #1a1a1a;
+}
+
+.HomepageHeaderNavigation_custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.NavLink_custom {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 0px; 
+  transition: color 0.3s, border 0.3s; 
+  display: inline-block; 
+  position: relative;
+}
+
+.NavLink_custom:hover {
+  color: white; 
+
+}
+
+.navLinkActive_custom {
+  border-bottom: 2px solid #1a1a1a; 
+  color: #1a1a1a; 
+}
+
+.navLinkActive_custom:hover {
+  border-bottom: 5px solid white;
+}
+
+.navLinkInactive_custom {
+  color: #1a1a1a; 
+}
+
+.HomepageNavbarbuttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.HomepageNavbarbuttons_btn_login {
+  background: #1a1a1a;
+  border: 2px solid #ffa500;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 20px;
+  color: #ffa500;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.HomepageNavbarbuttons_btn_login:hover {
+  background: #1a1a1a;
+  color: #ffa500;
+  transform: translateY(-2px);
+}
+
+.HomepageNavbarbuttons_btn_signup {
+  background: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 22px;
+  color: #ffa500;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.HomepageNavbarbuttons_btn_signup:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+}
+
+.HomepageNavbarbuttons_btn_registerGarage {
+  background: linear-gradient(45deg, #1a1a1a, #333);
+  border: 2px solid #ffa500;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 20px;
+  color: #ffa500;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.HomepageNavbarbuttons_btn_registerGarage:hover {
+  background: linear-gradient(45deg, #333, #1a1a1a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .HomepageNavbarbuttons {
+    gap: 8px;
+    padding-right: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_login,
+  .HomepageNavbarbuttons_btn_signup,
+  .HomepageNavbarbuttons_btn_registerGarage {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+.active {
+  border-bottom: 5px solid #1A1A1A;
+}
+
+
+
+/* .arrow-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+} */
+
+/* .HomepagePromotonalpicturesbanner_leftbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.HomepagePromotonalpicturesbanner_rightbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+} */
+
+
+.HomepagePromotionalpicturesSection {
+  position: relative;
+  width: 100%; 
+  height: 300px;
+  overflow: hidden; 
+  background: #1a1a1a; 
+  box-sizing: border-box;
+  
+}
+
+.HomepagePromotonalpicturesbanner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.HomepagePromotonalpicturesbanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.HomepagePromotonalpicturesbanner img:hover {
+  transform: scale(1.01); 
+}
+
+.HomepagePromotonalpicturesbanner_leftbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ffa500;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  left: 10px; 
+}
+
+.HomepagePromotonalpicturesbanner_rightbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ffa500;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  right: 10px; 
+}
+
+
+.HomePageAttainingServiceSection_Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.01) 30.1%, rgba(255, 165, 0, 0.12) 70.1%);
+  margin-top: 50px;
+  color: white;
+  height: 70px;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.HomePageAttainingServiceSection_Header_highlight {
+  color: #f5a623; 
+}
+
+.HomePageTabs {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1A1A1A;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Center the tabs */
+  gap: 20px; /* Space between tabs */
+  width: 100%;
+}
+
+.HomePageTab {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 15px;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+/* Style for both active tabs */
+.HomePageTab.gsactive,
+.HomePageTab.psactive {
+  background: linear-gradient(90deg, rgba(26, 26, 26, 0.00) 26.1%, rgba(255, 165, 0, 0.20) 100%);
+  border-radius: 5px;
+  position: relative;
+  z-index: 101;
+}
+
+/* Style for content sections */
+.HomePageTabContent {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* Increased gap for better visibility of animations */
+  overflow-x: hidden; /* Prevent horizontal scrolling during animations */
+}
+
+.HomePageTabContent_GettingService,
+.HomePageTabContent_ProvidingService {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Add space between items */
+}
+
+/* Remove the opacity: 0 from these classes */
+.HomePageTabContent_GettingService_1,
+.HomePageTabContent_GettingService_2,
+.HomePageTabContent_GettingService_3,
+.HomePageTabContent_GettingService_4,
+.HomePageTabContent_ProvidingService_1,
+.HomePageTabContent_ProvidingService_2,
+.HomePageTabContent_ProvidingService_3,
+.HomePageTabContent_ProvidingService_4 {
+  will-change: transform, opacity;
+  position: relative;
+  visibility: visible;
+  transform-origin: center center;
+}
+
+/*CIRCLE 1*/
+
+.HomePageTabContent_GettingService_1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_gs1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100%;
+}
+
+.GettingServiceCircle1 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GettingServiceCircle1_icon{
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.gs_c1 {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+
+.GetingService_gs1_text p, .GetingService_gs3_text p {
+color: #FFF;
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
+text-align: left;
+}
+
+
+/*CIRCLE 2*/
+
+.HomePageTabContent_GettingService_2 {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+
+  gap: 100px;
+}
+
+.circle-container_gs2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.GettingServiceCircle2 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GettingServiceCircle2_icon {
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.gs_c2 {
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+}
+
+.GetingService_gs2_text p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: right;
+}
+
+/*CIRCLE 3*/
+
+.HomePageTabContent_GettingService_3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_gs3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100%;
+}
+
+.GettingServiceCircle3 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GettingServiceCircle3_icon {
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.gs_c3 {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+
+.GetingService_gs3_text p {
+color: #FFF;
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
+text-align: left;
+}
+
+/*CIRCLE 4*/
+
+.HomePageTabContent_GettingService_4 {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_gs4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.GettingServiceCircle4 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GettingServiceCircle4_icon {
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.gs_c4 {
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+}
+
+.GetingService_gs4_text p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: right;
+}
+
+/*PROVIDING SERVICE CIRCLE 1*/
+
+.HomePageTabContent_ProvidingService_1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_ps1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100%;
+}
+
+.ProvidingServiceCircle1 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProvidingServiceCircle1_icon {
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ps_c1 {
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+}
+
+
+.ProvidingService_ps1_text p {
+color: #FFF;
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
+text-align: left;
+white-space: nowrap; /* Prevent text from wrapping to the next line */
+overflow: hidden; /* Hide overflow text */
+text-overflow: ellipsis; /* Add ellipsis for overflow text */
+width: 100%; /* Ensure the text takes full width */
+}
+
+/*PROVIDING SERVICE CIRCLE 2*/
+
+.HomePageTabContent_ProvidingService_2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_ps2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ProvidingServiceCircle2 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProvidingServiceCircle2_icon {
+  position: absolute;
+  width: 200px; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ps_c2 {
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.ProvidingService_ps2_text p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: right;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  width: 100%; /* Ensure the text takes full width */
+}
+
+/*PROVIDING SERVICE CIRCLE 3*/
+
+.HomePageTabContent_ProvidingService_3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_ps3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100%;
+}
+
+.ProvidingServiceCircle3 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProvidingServiceCircle3_icon {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ps_c3 {
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+}
+
+
+.ProvidingService_ps3_text p {
+color: #FFF;
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
+text-align: left;
+white-space: nowrap; /* Prevent text from wrapping to the next line */
+overflow: hidden; /* Hide overflow text */
+text-overflow: ellipsis; /* Add ellipsis for overflow text */
+width: 100%; /* Ensure the text takes full width */
+}
+
+/*PROVIDING SERVICE CIRCLE 4*/
+
+.HomePageTabContent_ProvidingService_4 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.circle-container_ps4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ProvidingServiceCircle4 {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.05);
+  filter: blur(25px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProvidingServiceCircle4_icon {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ps_c4 {
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.ProvidingService_ps4_text p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: right;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  width: 100%; /* Ensure the text takes full width */
+}
+
+/* Garages Section*/
+
+.HomePageGaragesSection_Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.01) 30.1%, rgba(255, 165, 0, 0.12) 70.1%);
+ 
+  color: white;
+  height: 70px;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.HomePageGaragesSection_Header_highlight {
+  color: #f5a623;
+}
+
+.garage-carousel {
+  position: relative;
+  height: 500px;
+  max-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.garage-card {
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%); /* Start position for entering cards */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.garage-card.active {
+  opacity: 1;
+  transform: translateX(0); /* Center position for active card */
+  pointer-events: auto;
+}
+
+.garage-card.previous {
+  transform: translateX(-100%); /* Position for exiting cards */
+  opacity: 0;
+}
+
+/* Remove the carousel button styles since we're removing them */
+.carousel-button {
+  display: none;
+}
+
+.garage-card-image {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+.garage-card-writings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+}
+
+.garage-card-writings-garagename {
+  margin: 0;
+  font-size: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.garage-card-writings-address{
+  font-size: 16px;
+  color: grey;
+}
+
+.garage-card-writings-description {
+  font-size: 16px;
+  color: grey;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  clip-path: polygon(
+    50% 0%,
+    61% 38%,
+    100% 38%,
+    69% 59%,
+    80% 100%,
+    50% 75%,
+    20% 100%,
+    31% 59%,
+    0% 38%,
+    39% 38%
+  );
+}
+
+.star-filled {
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  clip-path: polygon(
+    50% 0%,
+    61% 38%,
+    100% 38%,
+    69% 59%,
+    80% 100%,
+    50% 75%,
+    20% 100%,
+    31% 59%,
+    0% 38%,
+    39% 38%
+  );
+}
+
+.star-filled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inherit;
+  background-color: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.carousel-button {
+  /* position: absolute; */
+  /* top: 50%;
+  transform: translateY(-50%); */
+  background-color: transparent;
+  color: #ffa500;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: -15px;
+}
+
+.carousel-button.next {
+  right: -15px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.userdotinfo {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 12px;
+  margin-right: 20px;
+  color: #ffa500;
+}
+
+/* User Section */
+.HomepageUserSection_Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.01) 30.1%, rgba(255, 165, 0, 0.12) 70.1%);
+  margin-top: 35px;
+  color: white;
+  height: 70px;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.HomepageUserSection_Header_highlight {
+  color: #f5a623; 
+}
+
+.user-carousel-container {
+  position: relative; /* Needed for positioning the arrows */
+  overflow: hidden;
+}
+
+.user-carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 500px;
+  gap: 70px;
+  box-sizing: border-box;
+  padding: 20px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  align-items: center;
+}
+
+.user-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+.user-card {
+  flex: 0 0 auto;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  /* background: linear-gradient(180deg, rgba(255, 165, 0, 0.20) 1.76%, rgba(255, 165, 0, 0.03) 98.99%); */
+  height: 300px;
+}
+
+.user-card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-card-writings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.user-card-writings-garagename {
+  margin: 0;
+  font-size: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  background-color: #ddd;
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+}
+
+.user-card-writings-quotation {
+  width: 25px;
+  height: 25px;
+}
+
+.user-card-writings-description {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Arrows for Carousel */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #ffa500;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: -15px;
+}
+
+.carousel-button.next {
+  right: -15px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Testimonials Section */
+
+.HomepageUserSection_TestimonialsGrid{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); 
+  gap: 50px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.user-testimonial {
+  background: transparent;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  /* box-shadow: 0 2px 4px rgba(83, 83, 83, 0.5); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+}
+
+.user-testimonial:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(69, 69, 69, 0.7);
+}
+
+.user-testimonial img {
+  width: 50%; 
+  height: 100%; 
+  object-fit: cover;
+  border-right: 2.5px solid #1a1a1a; 
+}
+
+.testimonial-content {
+  flex: 1; 
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: left; 
+  gap: 25px;
+  width: 100%;
+  /* align-items: left; */
+}
+
+.testimonial-content h2 {
+  margin: 0;
+  font-size: 24px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  background-color: #ddd;
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.testimonial-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff; 
+}
+
+
+/* footer section*/
+.HomepageFooter {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.01) 30.1%, rgba(255, 165, 0, 0.12) 70.1%);
+  color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.HomepageFootercontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure content fits within the footer */
+}
+
+.HomepageFootercontent_middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure middle content fits within the footer */
+}
+
+.HomepageFootercontent h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.HomepageFootercontent p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.HomepageFootercontent hr {
+  width: 80%;
+  border: none;
+  border-top: 1px solid #555;
+  margin: 10px 0;
+}
+
+.HomepageFootercontent a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.HomepageFootercontent a:hover {
+  text-decoration: underline;
+}
+
+.HomepageFooter-social {
+  display: flex;
+  gap: 15px;
+}
+
+.HomepageFooter-social a {
+  color: #f5f5f5;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.HomepageFooter-social a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+
+
+
+/* Adjust navbar content for screens smaller than 900px */
+@media (max-width: 900px) {
+  .HomepageHeaderNav {
+    height: 45px; 
+    padding: 0 15px;
+  }
+
+  .HomepageHeaderNavLogo img {
+    height: 30px;
+    width: 160px;
+  }
+
+  .NavLink_custom {
+    font-size: 14px; 
+    padding: 0px 0px; 
+  }
+
+  .HomepageNavbarbuttons_btn_login {
+    
+    font-size: 14px;
+  }
+
+  .HomepageNavbarbuttons_btn_signup {
+   
+    font-size: 14px;
+  }
+
+  .HomepageNavbarbuttons_btn_registerGarage {
+    
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .HomepageHeaderNavLogo img {
+    height: 30px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  
+
+  .HomepageHeaderNavLogo img {
+    height: 30px;
+    width: 130px;
+  }
+
+  .HomepageHeaderNavigation_custom {
+    gap: 15px;
+  }
+
+  .HomepageHeaderNavigation_custom{
+    gap: 10px;
+  }
+
+  .NavLink_custom {
+    font-size: 12px;
+    padding: 0px 0px; 
+    gap: 5px;
+  }
+
+  .HomepageNavbarbuttons_btn_login {
+    
+    font-size: 12px;
+  }
+
+  .HomepageNavbarbuttons_btn_signup {
+   
+    font-size: 12px;
+  }
+
+  .HomepageNavbarbuttons_btn_registerGarage {
+    
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .HomePageTabContent {
+    padding: 50px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .HomePageTabContent_GettingService_1,
+  .HomePageTabContent_GettingService_2,
+  .HomePageTabContent_GettingService_3,
+  .HomePageTabContent_GettingService_4,
+  .HomePageTabContent_ProvidingService_1,
+  .HomePageTabContent_ProvidingService_2,
+  .HomePageTabContent_ProvidingService_3,
+  .HomePageTabContent_ProvidingService_4 {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .circle-container_gs1,
+  .circle-container_gs2,
+  .circle-container_gs3,
+  .circle-container_gs4,
+  .circle-container_ps1,
+  .circle-container_ps2,
+  .circle-container_ps3,
+  .circle-container_ps4{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .GettingServiceCircle1, .GettingServiceCircle2, .GettingServiceCircle3, .GettingServiceCircle4 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .GetingService_gs1_text p,
+  .GetingService_gs2_text p,
+  .GetingService_gs3_text p,
+  .GetingService_gs4_text p,
+  .ProvidingService_ps1_text p,
+  .ProvidingService_ps2_text p,
+  .ProvidingService_ps3_text p,
+  .ProvidingService_ps4_text p
+   {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .HomepageHeaderNavLogo img {
+    height: 20px;
+    width: 110px;
+  }
+
+  .HomepageHeaderNavigation_custom{
+    gap: 5px;
+  }
+
+  .NavLink_custom {
+    font-size: 10px; 
+    padding: 0px 0px; 
+  }
+
+  .HomepageNavbarbuttons_btn_login {
+    
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_signup {
+   
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_registerGarage {
+    
+    font-size: 10px;
+  }
+}
+
+/* 500px screen size */
+@media (max-width: 500px) {
+  
+  .HomepageHeaderNav {
+    padding: 0px 2px;
+  }
+  
+
+  .HomePageGaragesSection_Header {
+    font-size: 18px;
+  }
+
+  .HomepageUserSection_TestimonialsGrid{
+   
+    grid-template-columns: repeat(1, 1fr); 
+    
+  }
+
+  .HomepageUserSection_Header  {
+    font-size: 18px;
+  }
+
+  .HomepageHeaderNavigation_custom{
+    gap: 5px;
+  }
+
+  .HomepageHeaderNavLogo img {
+    height: 20px;
+    width: 90px;
+  }
+
+  .NavLink_custom {
+    font-size: 10px; 
+    padding: 0px 0px; 
+  }
+
+  .HomepageNavbarbuttons_btn_login {
+    
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_signup {
+   
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_registerGarage {
+    
+    font-size: 10px;
+  }
+}
+
+/* 400px screen size */
+@media (max-width: 430px) {
+  .HomepageHeaderNav {
+    height: 45px;
+    padding: 0 0px;
+  }
+
+  .HomepageHeaderNavLogo img {
+    height: 18px;
+    width: 60px;
+  }
+
+  .HomepageHeaderNavigation_custom {
+    gap: 2px;
+  }
+
+  .NavLink_custom {
+    font-size: 10px;
+    padding: 0px 0px; 
+  }
+
+  .HomepageNavbarbuttons_btn_login {
+    
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_signup {
+   
+    font-size: 10px;
+  }
+
+  .HomepageNavbarbuttons_btn_registerGarage {
+    
+    font-size: 10px;
+  }
+}
+
+.HomepagePromotionalCircles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.PromotionalCircle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #ffa500 100%);
+ 
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.PromotionalCircle:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.PromotionalCircleText {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Text color */
+}
+
+
+
+.TestTextcirclesection_Text1 {
+  margin: 0px;
+  color: #ffa500; /* Neon orange color for text */
+  text-align: center;
+  font-family: Urbanist, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  /* Neon effect */
+  text-shadow: 
+    0 0 1px #ffa500, /* Inner glow */
+    0 0 1px #ffa500, /* Medium glow */
+    0 0 1px #ff8c00; /* Larger reddish glow */
+   /* Farthest reddish glow */
+}
+.TestTextcirclesection_Text1 {
+  display: inline-block;
+  perspective: 1000px; /* Create a 3D space */
+}
+
+.TestTextcirclesection_Text1 {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.testcirclesection {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.TestTextcirclesection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.testcircle1, .testcircle2, .testcircle3 {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  will-change: transform;
+  filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
+.testcircle1 {
+  top: 20%;
+  left: 20%;
+  background: linear-gradient(120deg, rgba(26, 26, 26, 0.00) 47.5%, rgba(255, 165, 0, 0.25) 100%);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.1);
+}
+
+.testcircle2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 47.5%, rgba(255, 165, 0, 0.25) 100%);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.1);
+}
+
+.testcircle3 {
+  top: 20%;
+  right: 20%;
+  background: linear-gradient(120deg, rgba(26, 26, 26, 0.00) 47.5%, rgba(255, 165, 0, 0.25) 100%);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.1);
+}
+
+.tireIcon {
+  background-image: url('./icon/tire.png');
+  background-size: contain; /* Adjust to ensure the image fits properly */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center; /* Center the image within the element */
+  width: 50px; /* Set the desired width of the element */
+  height: 50px; /* Set the desired height of the element */
+}
+
+/* Custom cursor styles */
+.custom-cursor-page {
+  cursor: none;
+}
+
+/* Main cursor dot */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffa500;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+/* Outer cursor ring */
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 165, 0, 0.5);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for clickable elements */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring {
+  width: 50px;
+  height: 50px;
+  border-color: rgba(255, 165, 0, 0.8);
+  transform: translate(-25%, -25%);
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 165, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.5);
+  opacity: 0.8;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Ticker Animation */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  height: 400px; /* Adjust based on your needs */
+  background: rgba(26, 26, 26, 0.6);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.ticker {
+  display: flex;
+  animation: ticker 10s linear infinite;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  flex-shrink: 0;
+  width: 300px; /* Adjust based on your card width */
+}
+
+/* Update user-card styles */
+.user-card {
+  width: 100%;
+  height: 350px;
+  background: rgba(255, 165, 0, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 165, 0, 0.1);
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Adjust this value based on your content width */
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ticker-wrap {
+    height: 450px;
+  }
+  
+  .ticker-item {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker-wrap {
+    height: 500px;
+  }
+  
+  .ticker-item {
+    width: 200px;
+  }
+}
+
+

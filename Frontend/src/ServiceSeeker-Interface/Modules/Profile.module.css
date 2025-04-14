@@ -1,0 +1,581 @@
+.profile {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #4A4A4A;
+}
+
+.profileImageContainer {
+  width: 120px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4A4A4A;
+  border: 3px solid #FFA500;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.profileImage.editable {
+  cursor: pointer;
+}
+
+.profileImage.editable:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageInitials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageActions {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  width: 100px;
+}
+
+.imageButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.deleteButton {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.deleteButton:hover {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.uploadPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.uploadIcon {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profileInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profileInfo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profileInfo p {
+  margin: 0;
+  color: #DDD;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.profileField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profileField label {
+  color: #DDD;
+  font-size: 14px;
+}
+
+.profileField input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #4A4A4A;
+  color: white;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.profileField input:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.profileField input:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+.profileActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.profileActions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.profileActions button:first-child {
+  background-color: #4A4A4A;
+  color: white;
+}
+
+.profileActions button:last-child {
+  background-color: #FFA500;
+  color: white;
+}
+
+.profileActions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 5) 0%, rgba(255, 165, 0, 0) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  border: 2px solid #404040;
+}
+
+.modalContent h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.modalContent p {
+  margin-bottom: 20px;
+  color: #DDD;
+  line-height: 1.5;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modalContent input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #4A4A4A;
+  color: white;
+  font-size: 16px;
+}
+
+.modalContent input:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modalActions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 100px;
+  transition: all 0.2s ease;
+}
+
+.modalActions button:not(.deleteButton) {
+  background-color: #FFA500;
+  color: white;
+}
+
+.modalActions .deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modalActions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    padding: 15px;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .profileInfo {
+    align-items: center;
+  }
+
+  .profileActions {
+    flex-direction: column;
+  }
+
+  .profileActions button {
+    width: 100%;
+  }
+
+  .modalContent {
+    width: 95%;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  /* Continuing the CSS file from where it was cut off */
+
+  .modalContent {
+    width: 95%;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .modalActions button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .imageActions {
+    gap: 5px;
+  }
+
+  .imageButton {
+    width: 90px;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .uploadPrompt {
+    font-size: 14px;
+  }
+
+  .profileField {
+    margin-bottom: 12px;
+  }
+
+  .profileField input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .profileImageContainer {
+    width: 100px;
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .imageInitials {
+    font-size: 36px;
+  }
+}
+
+/* Password Modal Form Specific Styles */
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modalContent form input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #27241d 0%, rgba(39, 36, 29, 0.1) 100%);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modalContent form input::placeholder {
+  color: #999;
+}
+
+.modalContent form input:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+/* Error States */
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.errorInput {
+  border-color: #ff4d4d !important;
+}
+
+.errorInput:focus {
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2) !important;
+}
+
+/* Success States */
+.successOverlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading States */
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #FFA500;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover Effects */
+.profileField input:hover:not(:disabled) {
+  border-color: #888;
+}
+
+.profileActions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profileActions button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus States */
+.profileField input:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+/* Transition Effects */
+.profileImage,
+.imageOverlay,
+.imageButton,
+button,
+input {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Additional Modal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .profileImage,
+  .imageOverlay,
+  .imageButton,
+  button,
+  input,
+  .modal,
+  .modalContent,
+  .successOverlay {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .profile {
+    background-color: white;
+    color: black;
+    padding: 0;
+  }
+
+  .profileActions,
+  .imageOverlay,
+  .imageButton {
+    display: none;
+  }
+
+  .profileField input {
+    border: none;
+    background: none;
+    padding: 0;
+    color: black;
+  }
+}
+.note{
+  color:#ffa500;
+  font-size: 18px;
+  font-weight: bolder;
+}

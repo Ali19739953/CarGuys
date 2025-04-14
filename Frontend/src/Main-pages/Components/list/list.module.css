@@ -1,0 +1,30 @@
+.ClientMessengerlist {
+  flex: 1; /* Grow to fill available space in the parent container */
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(177deg, rgba(255, 165, 0, 0.20) 4.74%, rgba(255, 165, 0, 0.03) 90.11%);
+}
+
+.ClientMessengerlist_List {
+  flex: 1; /* Allow the list to grow within the parent */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  min-height: 0; /* Prevent height from exceeding the parent's constraints */
+}
+
+/* Scrollbar styling */
+.ClientMessengerlist_List::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ClientMessengerlist_List::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.ClientMessengerlist_List::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.ClientMessengerlist_List::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}

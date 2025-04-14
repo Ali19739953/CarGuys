@@ -1,0 +1,4 @@
+Django
+djangorest framework
+firebase-admin
+django-cors-headers

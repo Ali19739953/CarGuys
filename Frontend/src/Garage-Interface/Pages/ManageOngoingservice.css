@@ -1,0 +1,183 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Keeps the height 100% but allows scroll */
+  /* Remove overflow: hidden */
+   overflow: auto;  
+
+   
+}
+
+.ManageOngoingServicesContainer {
+  display: flex;
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%; 
+  box-sizing: border-box;   
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ManageOngoingServicesMain {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto; 
+
+}
+
+.ManageOngoingServicesContent {
+  padding: 0px;
+}
+
+.ManageOngoingServicesSearchbar{
+  margin-bottom: 20px;
+}
+
+.ManageOngoingServicesItem_Box {
+    background: rgba(255, 165, 0, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid rgba(255, 165, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+}
+
+.ManageOngoingServicesItem_Box:hover {
+    transform: scale(1.02);
+    transition: transform 0.15s ease-in-out;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+}
+
+.ManageOngoingServicesItem_Box_ImageAndName {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.ManageOngoingServicesItem_Box_ImageAndName img {
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 165, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.ManageOngoingServicesItem_Box_Content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ManageOngoingServicesItem_Box_Fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.ManageOngoingServicesItem_Box_Fields div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.ManageOngoingServicesItem_Box_Fields div::before {
+    content: attr(data-label);
+    color: #999;
+    min-width: 120px;
+}
+
+.ManageOngoingServicesItem_Box_Fields div span {
+    color: white;
+    font-weight: 500;
+}
+
+.ManageOngoingServicesItem_Box_Button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.ManageOngoingServicesItem_Box_Button_AccessPreServiceContract {
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: linear-gradient(180deg, #58FF68 0%, rgba(53, 153, 63, 0.80) 100%);
+    color: black;
+}
+
+.ManageOngoingServicesItem_Box_Button_AccessPreServiceContract:hover {
+    transform: scale(1.05);
+}
+
+.ManageOngoingServicesMain::-webkit-scrollbar {
+  width: 6px;
+    height: 1px;
+}
+
+.ManageOngoingServicesMain::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.ManageOngoingServicesMain::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.ManageOngoingServicesMain::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
+  font-weight: bolder;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  background-color: #FFA500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: none;
+  color: black;
+  font-weight: bold;
+}
+
+.pagination-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+.pagination-button.active {
+  background: linear-gradient(90deg, #000 25.1%, #B47500 100%);
+  color: black;
+  border-color: #007bff;
+}
+
+.pagination-button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

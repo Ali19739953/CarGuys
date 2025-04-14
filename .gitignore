@@ -1,0 +1,92 @@
+# dependencies
+node_modules/
+.pnpm/
+dist/
+build/
+
+# dotenv files
+.env
+.env.local
+.env.*.local
+
+# Firebase
+.firebase/
+.firebasehosting.*
+/src/firebaseConfig.jsx
+
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE/editor stuff
+.vscode/
+.idea/
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Git
+.git/
+
+# Others
+coverage/
+
+# dotenv files
+.env
+.env.local
+.env.*.local
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,298 @@
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Keeps the height 100% but allows scroll */
+    /* Remove overflow: hidden */
+     overflow: auto;  
+     /* background: #fff; */
+     
+    
+}
+.CompletedServicesItem_Box_Image{
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+}
+.CompletedServicesContainer {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+    display: flex;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100vh;
+    overflow: hidden;
+}
+.link {
+    text-decoration: none;
+}
+
+.CompletedServicesMain {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.CompletedServicesContent {
+    padding: 0px;
+}
+
+.CompletedServicesSearchbar{
+    margin-bottom: 20px;
+}
+
+.CompletedServicesItem_Box {
+    background: rgba(255, 165, 0, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid rgba(255, 165, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+}
+
+.CompletedServicesItem_Box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.25) 0%, rgba(255, 165, 0, 0.05) 100%);
+}
+
+.CompletedServicesItem_Box_ImageAndName {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.CompletedServicesItem_Box_ImageAndName img {
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 165, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.CompletedServicesItem_Box_Content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.CompletedServicesItem_Box_Fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.CompletedServicesItem_Box_Fields div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.CompletedServicesItem_Box_Fields div::before {
+    content: attr(data-label);
+    color: #999;
+    min-width: 120px;
+}
+
+.CompletedServicesItem_Box_Fields div span {
+    color: white;
+    font-weight: 500;
+}
+
+/* Button styles */
+.CompletedServicesItem_Box_Button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.CompletedServicesItem_Box_Button_GeneratePaymentLink,
+.CompletedServicesItem_Box_Button_COD,
+.CompletedServicesItem_Box_Button_MarkPaid {
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: black;
+}
+
+.CompletedServicesItem_Box_Button_GeneratePaymentLink {
+    background: linear-gradient(180deg, #58FF68 0%, rgba(53, 153, 63, 0.80) 100%);
+}
+
+.CompletedServicesItem_Box_Button_COD {
+    background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.CompletedServicesItem_Box_Button_MarkPaid {
+    background: linear-gradient(180deg, #58FF68 0%, rgba(53, 153, 63, 0.80) 100%);
+}
+
+.payment-status-success {
+    color: #58FF68;
+    font-weight: bold;
+    padding: 8px 24px;
+}
+
+/* Hover effects */
+.CompletedServicesItem_Box_Button_GeneratePaymentLink:hover,
+.CompletedServicesItem_Box_Button_COD:hover,
+.CompletedServicesItem_Box_Button_MarkPaid:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .CompletedServicesItem_Box {
+        padding: 16px;
+    }
+
+    .CompletedServicesItem_Box_ImageAndName {
+        flex-direction: column;
+    }
+
+    .CompletedServicesItem_Box_ImageAndName img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .CompletedServicesItem_Box_Fields {
+        grid-template-columns: 1fr;
+    }
+
+    .CompletedServicesItem_Box_Button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .CompletedServicesItem_Box_Button_GeneratePaymentLink,
+    .CompletedServicesItem_Box_Button_COD,
+    .CompletedServicesItem_Box_Button_MarkPaid {
+        width: 100%;
+    }
+}
+
+.CompletedServicesMain::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+  }
+  
+  .CompletedServicesMain::-webkit-scrollbar-track {
+    background-color: #1D1B20;
+  }
+  
+  .CompletedServicesMain::-webkit-scrollbar-thumb {
+    background-color: #FFA500;
+    border-radius: 10px;
+  }
+  
+  .CompletedServicesMain::-webkit-scrollbar-thumb:hover {
+    background-color: #FF8C00;
+  }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
+  font-weight: bolder   ;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  background-color: #FFA500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.pagination-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+.pagination-button.active {
+    background: linear-gradient(90deg, #000 25.1%, #B47500 100%);
+  color: black;
+  border-color: #007bff;
+}
+
+.pagination-button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.CompletedServicesItem_Box_Button_COD {
+    display: flex;
+    width: 187px;
+    height: 28px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+    transition: transform 0.2s ease; 
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.CompletedServicesItem_Box_Button_COD:hover {
+    transform: scale(1.05);
+}
+
+/* Ensure buttons are side by side */
+.cod-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start; /* Align buttons to the start */
+    width: auto;
+}
+
+/* Button styles */
+.CompletedServicesItem_Box_Button_COD,
+.CompletedServicesItem_Box_Button_MarkPaid {
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: black;
+    min-width: 150px; /* Ensure minimum width for buttons */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .cod-buttons {
+        flex-direction: row; /* Keep buttons side by side even on mobile */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: flex-start;
+    }
+
+    .CompletedServicesItem_Box_Button_COD,
+    .CompletedServicesItem_Box_Button_MarkPaid {
+        flex: 0 1 auto; /* Allow buttons to maintain their size */
+        min-width: 120px; /* Slightly smaller minimum width for mobile */
+    }
+}

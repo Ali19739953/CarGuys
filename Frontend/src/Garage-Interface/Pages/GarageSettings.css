@@ -1,0 +1,140 @@
+.garage-settings-container {
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  display: flex;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.garage-settings-main {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-left: 10px;
+  width: calc(100% - 80px);
+}
+
+.garage-settings-main::-webkit-scrollbar {
+  width: 6px;
+  height: 1px;
+}
+
+.garage-settings-main::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.garage-settings-main::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.garage-settings-main::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}
+
+.garage-settings-content {
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 1.76%, rgba(255, 165, 0, 0.03) 98.99%);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.garage-settings-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FFA500;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.settings-text {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.change-password-btn {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+  margin-bottom: 30px;
+}
+
+.edit-gallery-btn {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.change-password-btn:hover,
+.edit-gallery-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #FFB84D 0%, rgba(180, 117, 0, 0.90) 100%);
+}
+
+.verify-btn {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  color: #FFA500;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.verify-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.1) 100%);
+  border-color: rgba(255, 165, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .garage-settings-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .settings-btn {
+    width: 100%;
+  }
+}

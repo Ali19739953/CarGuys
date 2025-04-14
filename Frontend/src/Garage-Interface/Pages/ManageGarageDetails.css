@@ -1,0 +1,637 @@
+html, body, .root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;  
+}
+
+.ManageGarageDetailsContainer {
+  display: flex;
+  /* background-color: #111;  */
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%; 
+  box-sizing: border-box;   
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ManageGarageDetailsMain {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+
+.ManageGarageDetailsContent {
+  background-color: #2e2a25;
+  background: linear-gradient(180deg,
+      rgba(255, 165, 0, 0.2) 1.76%,
+      rgba(255, 165, 0, 0.03) 98.99%);
+  border-radius: 8px;
+  padding: 20px;
+  /* margin-right: 20px;
+  margin-left: 20px;  */
+}
+
+.ManageGarageDetailsContent_PfpAndBanner {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the banner and pfp horizontally */
+  align-items: center; /* Center the banner and pfp vertically */
+  flex-direction: column;
+  width: 100%;
+}
+
+.ManageGarageDetailsContent_PfpAndBanner_Banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #d9d9d9;
+  position: relative; /* So the pfp can overlap */
+}
+
+.ManageGarageDetailsContent_PfpAndBanner_Banner_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ManageGarageDetailsContent_PfpAndBanner_Pfp {
+  width: 150px;
+  height: 150px;
+  position: absolute; /* Allow it to overlap the banner */
+  bottom: -50px; /* Moves the pfp halfway down the banner */
+  left: 50%;
+  transform: translateX(-50%); /* Center the pfp horizontally */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffffff; 
+}
+
+.ManageGarageDetailsContent_PfpAndBanner_Pfp_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ManageGarageDetailsContent_GarageName {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 10px; /* Space between the input and the button */
+  
+}
+
+.ManageGarageDetailsContent_GarageName_Input {
+  width: 200px; /* Adjust the width to fit the layout */
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visual */
+  text-align: center; /* Horizontally center the text inside the input */
+  background: linear-gradient(180deg, rgba(255, 165, 0, 0.2) 1.76%, rgba(228, 222, 222, 0.03) 98.99%);
+  color: white;
+  
+}
+
+.ManageGarageDetailsContent_GarageName_Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.ManageGarageDetailsContent_GarageName_Icon_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ManageGarageDetails_Description_Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_Description_Header_Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.ManageGarageDetails_Description_Header_Button_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ManageGarageDetails_Description_Box_TextItem {
+  width: 100%;
+  max-width: 100%; /* Prevent overflow and ensure the parent container shrinks */
+  
+}
+
+.ManageGarageDetails_Description_Box {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensures the box takes full width */
+  gap: 10px; /* Adds space between textarea and button */
+}
+
+.ManageGarageDetails_Description_Box_TextArea {
+  display: block; /* Change from flex to block for responsive behavior */
+  position: sticky;
+  top: 10px; /* Adjust this to position it where you want it to stick */
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  color: white;
+  padding: 10px; /* Optional: Add some padding */
+  width: 100%; /* Ensure it takes up the full width of the parent container */
+  max-width: 100%; /* Prevent the textarea from exceeding the container's width */
+  min-width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  resize: none; /* Prevent the user from resizing the textarea */
+  font-family: Arial, sans-serif; /* Adjust font style */
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+  border: none;
+  border-radius: 20px;
+}
+
+
+.ManageGarageDetails_Description_Box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.ManageGarageDetails_Description_Box_Button_Icon {
+  display: flex;
+  width: 78px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+margin: 0px;
+
+}
+
+.ManageGarageDetails_GarageLocation_Header {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_GarageLocation_MapContainer {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  height: 300px;
+  display: flex;
+  border-radius: 20px;
+}
+
+#map {
+  width: 100%;
+  margin: 10px; /* Add margin to create space between the map and container's border */
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.ManageGarageDetails_GarageLocation_Location_Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+
+.ManageGarageDetails_GarageLocation_Location_Footer_Button {
+  display: flex;
+  width: 78px;
+  height: 28px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+
+margin: 0px;
+}
+
+.ManageGarageDetails_GarageLocation_Header {
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_ContactDetails_Header{
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_ContactDetails_Content {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  border-radius: 20px;
+}
+
+.ManageGarageDetails_ContactDetails_Content_Phone,
+.ManageGarageDetails_ContactDetails_Content_Email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Optional: Add space between phone and email sections */
+}
+
+/* Phone Section */
+.ManageGarageDetails_ContactDetails_Content_Phone_Icon_Button,
+.ManageGarageDetails_ContactDetails_Content_Email_Icon_Button {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  background-color: transparent; /* Remove any background */
+  border: none; /* Remove the button border */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 5px; /* Adjust padding for spacing */
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.ManageGarageDetails_ContactDetails_Content_Phone_Icon_Button_Img,
+.ManageGarageDetails_ContactDetails_Content_Email_Icon_Button_Img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.ManageGarageDetails_OperatingHours_Header{
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_OperatingHours_Content {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  border-radius: 20px;
+}
+
+.ManageGarageDetails_OperatingHours_Content_ToggleList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Two equal-width columns */
+  grid-gap: 10px; /* Controls the gap between grid items */
+  padding: 0px;
+}
+
+.ManageGarageDetails_OperatingHours_Content_ToggleItem {
+  display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 5px 20px;
+    border: 0.1px solid #FFA500;
+    border-radius: 20px;
+}
+
+
+.ManageGarageDetails_Payment_Header {
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_Payment_Content {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  border-radius: 20px;
+}
+
+.ManageGarageDetails_Payment_Content_Bank_Buttons_BankDetails {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  border-radius: 20px;
+}
+
+.ManageGarageDetails_Payment_Content_Bank_Buttons_AddButton_Button {
+  display: flex;
+  width: 100px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.ManageGarageDetails_Payment_Content_Methods_CheckBoxes {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Two equal-width columns */
+  grid-gap: 10px; /* Controls the gap between grid items */
+  padding: 0px;
+}
+
+.ManageGarageDetails_Payment_Content_Bank_Buttons_Header {
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_Payment_Content_Methods_Button {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ManageGarageDetails_Payment_Content_Methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.ManageGarageDetails_Payment_Content_Methods_Button_Button {
+  display: flex;
+  width: 150px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+}
+
+.ManageGarageDetails_ServicesOffered_Header {
+  margin-bottom: 10px;
+}
+
+.ManageGarageDetails_ServicesOffered_Content {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 0%, rgba(255, 165, 0, 0.03) 100%);
+  padding: 10px; /* Keep some padding inside the container */
+  border-radius: 20px;
+}
+
+.ManageGarageDetails_ServicesOffered_Content_CheckboxGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ManageGarageDetails_ServicesOffered_Content_CheckboxGroup_AddManualButton {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  background-color: transparent; /* Remove any background */
+  border: none; /* Remove the button border */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 5px; /* Adjust padding for spacing */
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.ManageGarageDetails_ServicesOffered_Content_CheckboxGroup_AddManualButton_Img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: auto;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  
+}
+
+.ManageGarageDetails_ServicesOffered_Content_CheckboxInput {
+  width: 15px;
+  height: 15px;
+}
+
+.ManageGarageDetails_Payment_Content_Methods_CheckBoxes_Input {
+  width: 15px;
+  height: 15px;
+}
+
+input:checked+.slider {
+  background-color: #ffa500;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+  
+}
+
+.ManageGarageDetailsMain::-webkit-scrollbar {
+  width: 6px;
+    height: 1px;
+}
+
+.ManageGarageDetailsMain::-webkit-scrollbar-track {
+  background-color: #1D1B20;
+}
+
+.ManageGarageDetailsMain::-webkit-scrollbar-thumb {
+  background-color: #FFA500;
+  border-radius: 10px;
+}
+
+.ManageGarageDetailsMain::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C00;
+}
+
+.visa-icon, .tabby-icon, .cod-icon {
+  height: 50px;
+  background: transparent; /* Ensure the background is transparent */
+  border-radius: 40px;
+ 
+}
+.visa-icon, .tabby-icon, .cod-icon :hover{
+  cursor: pointer;
+}
+
+.profile-image-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2a25;
+}
+
+.empty-profile-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-button {
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.delete-image-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ManageGarageDetailsContent_PfpAndBanner_Pfp_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.LoadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+}
+
+.payment-methods-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color:white;
+  font-weight: bold;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.ManageGarageDetails_OperatingHours_SaveButton_Button {
+  display: flex;
+  width: 150px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ManageGarageDetails_ServicesOffered_SaveButton_Button {
+  display: flex;
+  width: 120px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.location-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.change-location-button {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.payment-method-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.payment-method-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+

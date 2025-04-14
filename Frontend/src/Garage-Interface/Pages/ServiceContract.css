@@ -1,0 +1,161 @@
+html, body, .root {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Keeps the height 100% but allows scroll */
+    width: 100%;
+    /* Remove overflow: hidden */
+     overflow: auto;  
+     /* background: #fff; */
+
+}
+
+.ServiceContractsContainer {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.04) 0%, rgba(255, 165, 0, 0.04) 100%);
+  background-color: #111;
+    display: flex;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%; 
+    box-sizing: border-box;   
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ServiceContractsMain {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.ServiceContractsContent {
+    padding: 0px;
+}
+
+.ServiceContractsSearchbar{
+     margin-bottom: 20px;
+}
+
+.ServiceContracts_PreServiceContractsSection_Heading {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.ServiceContracts_PreServiceContractsSection_Heading h2{
+    margin: 0px;
+}
+
+.ServiceContracts_PostServiceContractsSection_Heading {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.ServiceContracts_PostServiceContractsSection_Heading h2{
+    margin: 0px;
+}
+
+.ServiceContracts_PreServiceContracts_Item {
+    background-color: #2e2a25;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.ServiceContracts_PreServiceContracts_Item:hover {
+    transform: scale(1.02);
+    transition: transform 0.15s ease-in-out;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+}
+
+.ServiceContracts_PostServiceContracts_Item {
+    background-color: #2e2a25;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.20) 20%, rgba(255, 165, 0, 0.03) 100%);
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.ServiceContracts_PostServiceContracts_Item:hover {
+    transform: scale(1.02);
+    transition: transform 0.15s ease-in-out;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.15) 20%, rgba(255, 165, 0, 0.03) 86.3%);
+}
+
+.ServiceContracts_PreServiceContracts_ImageAndName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ServiceContracts_PostServiceContracts_Item_Fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.ServiceContracts_PostServiceContracts_ImageAndName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ServiceContracts_PreServiceContracts_Item_Button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ServiceContracts_PostServiceContracts_Item_Button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ServiceContracts_PreServiceContracts_Item_Button_B {
+display: flex;
+width: 226px;
+height: 28px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+font-weight: bold;
+}
+
+.ServiceContracts_PostServiceContracts_Item_Button_B {
+display: flex;
+width: 226px;
+height: 28px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+font-weight: bold;
+}
+
+
+  .ServiceContractsMain::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+  }
+  
+  .ServiceContractsMain::-webkit-scrollbar-track {
+    background-color: #1D1B20;
+  }
+  
+  .ServiceContractsMain::-webkit-scrollbar-thumb {
+    background-color: #FFA500;
+    border-radius: 10px;
+  }
+  
+  .ServiceContractsMain::-webkit-scrollbar-thumb:hover {
+    background-color: #FF8C00;
+  }

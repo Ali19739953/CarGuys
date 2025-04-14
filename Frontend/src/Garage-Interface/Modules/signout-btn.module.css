@@ -1,0 +1,22 @@
+.signOutBtn {
+   
+    bottom: 0; 
+    left: 30px; 
+    background-color: #f1c40f;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    color: black;
+    cursor: pointer;
+    max-width: 130px;
+    background: linear-gradient(90deg, #000 25.1%, #B47500 100%);
+    color: white;
+    font-weight: bold;
+    margin-top: 250px;
+}
+
+.logoutImg {
+    position: relative; 
+    margin-right: 8px; 
+    top: 4px;
+}

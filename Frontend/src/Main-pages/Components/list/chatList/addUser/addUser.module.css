@@ -1,0 +1,92 @@
+.ClientMessengerAdduseraddUser {
+  width: max-content;
+  height: max-content;
+   padding: 20px; 
+  background: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: fadeIn 1.3s ease;
+}
+
+.ClientMessengerAdduseraddUser p{
+  margin-top: 0px;
+}
+
+.ClientMessengerAdduserForm {
+  display: flex;
+  gap: 20px;
+}
+
+.ClientMessengerAdduserInput {
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);
+
+
+}
+
+.ClientMessengerAdduserButton {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ClientMessengerSearchButton {
+  display: flex;
+width: 147px;
+height: 28px;
+padding: 8px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 20px;
+background: linear-gradient(180deg, #FFA500 0%, rgba(180, 117, 0, 0.80) 100%);
+font-weight: bold;
+transition: transform 0.2s ease;
+cursor: pointer;
+}
+
+.ClientMessengerUser {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ClientMessengerDetail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ClientMessengerDetail img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* for fade in animation for the modals */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

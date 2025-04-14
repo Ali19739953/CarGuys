@@ -1,0 +1,77 @@
+.ServiceSeekerHomepageContent {
+  padding: 20px;
+  height: calc(100vh - 60px); /* Adjust based on your header height */
+  overflow-y: auto;
+}
+
+.settings-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.30) 0%, rgba(255, 165, 0, 0.10) 100%);
+  border-radius: 8px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #4A4A4A;
+}
+
+.tab-button.active {
+  background-color: #FFA500;
+  color: white;
+}
+
+.settings-content {
+  background-color: transparent;
+  border-radius: 8px;
+  min-height: 400px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 18px;
+  background-color: #3A3A3A;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ServiceSeekerHomepageContent {
+    padding: 10px;
+  }
+
+  .settings-tabs {
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .tab-button {
+    white-space: nowrap;
+    padding: 10px 20px;
+  }
+
+  .settings-content {
+    min-height: 300px;
+  }
+}
