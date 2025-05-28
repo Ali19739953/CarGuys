@@ -22,16 +22,6 @@ function HomePage() {
     }
   };
 
- 
-
-  const pop = () => {
-    alert("Backend services are not available including login and signup. I am a student and don't want to spend money on hosting the backend, Although the complete project is available on GitHub!");
-  };
-
-  useEffect(() => {
-    pop();
-  }, []); 
-
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials = [
     {
